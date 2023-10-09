@@ -69,7 +69,7 @@ const Login = () => {
           </div>
 
           <div className="text-2xl flex flex-col">
-            <h4 className=" text-center">Or</h4>
+            <h4 className=" text-sky-300 text-center">Or</h4>
             <Link to="/register" className="mx-auto px-4 py-2 text-white text-xl font-bold rounded-lg bg-red-600 hover:bg-red-700 w-fit ">Sign Up</Link>
           </div>
         </form>

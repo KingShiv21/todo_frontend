@@ -94,7 +94,7 @@ const Home = () => {
           <form onSubmit={submitHandler} className=" flex flex-col gap-3 w-full sm:w-[30rem] mx-auto">
           
             <input
-            className="focus:outline-none  h-8 sm:h-10 rounded-md text-lg sm:text-xl px-3 text-gray-500 hover:bg-gray-100  hover:border-4 hover:border-sky-400"
+            className="focus:outline-none  h-8 sm:h-10 rounded-md text-lg sm:text-xl px-3 text-gray-500 hover:bg-gray-100  hover:border-4 sm:hover:border-2 hover:border-sky-400"
               type="text"
               placeholder="Title"
               required
@@ -102,7 +102,7 @@ const Home = () => {
               onChange={(e) => setTitle(e.target.value)}
             />
             <input
-            className="focus:outline-none  hover:border-3 border-neutral-400 border h-8 sm:h-10 rounded-md text-sm sm:text-lg px-3 text-gray-500 hover:bg-gray-100 hover:border-4 hover:border-sky-400"
+            className="focus:outline-none border-neutral-400 border h-8 sm:h-10 rounded-md text-sm sm:text-lg px-3 text-gray-500 hover:bg-gray-100 hover:border-4 sm:hover:border-2 hover:border-sky-400"
               type="text"
               placeholder="Description"
               required
