@@ -28,15 +28,15 @@ const Header = () => {
   };
 
   return (
-    <nav className="header">
-      <div>
-        <h2>Todo App.</h2>
+    <nav className="gap-2 h-fit py-1 sm:py-0 sm:h-20 w-full sm:px-5 flex flex-col sm:flex-row bg-cyan-950 text-sky-300 font-bold items-center text-xl sm:text-3xl sticky top-0 ">
+      <div className=" sm:flex-1">
+        <h2 className=" text-2xl sm:text-3xl hover:text-sky-500">Todo App.</h2>
       </div>
-      <article>
-        <Link to={"/"}>Home</Link>
-        <Link to={"/profile"}>Profile</Link>
+      <article className="w-full sm:w-fit justify-around sm:justify-normal flex flex-row sm:gap-5 ">
+        <Link to={"/"} className=" hover:text-sky-500" >Home</Link>
+        <Link to={"/profile"} className="hover:text-sky-500 ">Profile</Link>
         {isAuthenticated ? (
-          <button disabled={loading} onClick={logoutHandler} className="btn">
+          <button disabled={loading} onClick={logoutHandler} className="hover:text-sky-500">
             Logout
           </button>
         ) : (

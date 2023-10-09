@@ -88,11 +88,13 @@ const Home = () => {
   if (!isAuthenticated) return <Navigate to={"/login"} />;
 
   return (
-    <div className="container">
-      <div className="login">
-        <section>
-          <form onSubmit={submitHandler}>
+    <div className=" w-full h-full  flex flex-col ">
+
+        <section className=" mx-auto h-fit mt-[2rem] w-full px-2">
+          <form onSubmit={submitHandler} className=" flex flex-col gap-3 w-full sm:w-[30rem] mx-auto">
+          
             <input
+            className="focus:outline-none  h-8 sm:h-10 rounded-md text-lg sm:text-xl px-3 text-gray-500 hover:bg-gray-100  hover:border-4 hover:border-sky-400"
               type="text"
               placeholder="Title"
               required
@@ -100,6 +102,7 @@ const Home = () => {
               onChange={(e) => setTitle(e.target.value)}
             />
             <input
+            className="focus:outline-none  hover:border-3 border-neutral-400 border h-8 sm:h-10 rounded-md text-sm sm:text-lg px-3 text-gray-500 hover:bg-gray-100 hover:border-4 hover:border-sky-400"
               type="text"
               placeholder="Description"
               required
@@ -107,14 +110,14 @@ const Home = () => {
               onChange={(e) => setDescription(e.target.value)}
             />
 
-            <button disabled={loading} type="submit">
+            <button disabled={loading} type="submit"  className=" text-lg sm:text-xl font-bold rounded-lg bg-green-600 hover:bg-green-700 hover:border-2 hover:border-green-400 w-fit mx-auto px-4 py-1 sm:py-2 text-white"> 
               Add Task
             </button>
           </form>
         </section>
-      </div>
 
-      <section className="todosContainer">
+
+      <section  className="  mt-8 px-2 sm:px-0">
         {tasks.map((i) => (
           <TodoItem
             title={i.title}

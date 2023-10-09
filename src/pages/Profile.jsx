@@ -8,7 +8,7 @@ const Profile = () => {
   return loading ? (
     <Loader />
   ) : (
-    <div>
+      <div className=" font-bold text-center text-2xl break-all sm:text-4xl text-red-500 hover:text-red-600">
       <h1>{user?.name}</h1>
       <p>{user?.email}</p>
     </div>

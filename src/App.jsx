@@ -31,6 +31,7 @@ function App() {
   }, [userRefresh]);
 
   return (
+    <div className=" bg-black overflow-x-hidden h-screen">
     <Router>
       <Header />
       <Routes>
@@ -41,6 +42,7 @@ function App() {
       </Routes>
       <Toaster />
     </Router>
+    </div>
   );
 }
 
